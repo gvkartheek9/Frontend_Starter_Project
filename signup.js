@@ -1,11 +1,11 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('signup-form');
     const passwordInput = document.getElementById('password');
     const resumeInput = document.getElementById('resume');
     const phoneInput = document.getElementById('phone');
     const phonePattern = /^\d{10}$/; // Regular expression to match 10 digits only
 
-    form.addEventListener('submit', function(event) {
+    form.addEventListener('submit', function (event) {
         // Validate password
         const password = passwordInput.value;
         const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
@@ -31,8 +31,14 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        window.location.href = 'signUplanding.html';
+        // window.location.href = 'signUplanding.html';
+
         // If all validations pass, the form will submit
+
+        // If validation passes, navigate to Landing.html
+        document.getElementById('signup-form').action = 'signUplanding.html';
+        document.getElementById('signup-form').method = 'GET';
+
         if (!isValid) {
             event.preventDefault();
         }
