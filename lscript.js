@@ -33,8 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             return;
           }
-
+          window.location.href = 'landing.html';
         // If the validation is successful, the form will be submitted
         // and the user will be redirected to landing.html as per the form's action attribute
+
+        event.preventDefault();
     });
 });
