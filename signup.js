@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        window.location.href = 'landing.html';
+        window.location.href = 'signUplanding.html';
         // If all validations pass, the form will submit
     });
 });
