@@ -33,5 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         window.location.href = 'signUplanding.html';
         // If all validations pass, the form will submit
+        if (!isValid) {
+            event.preventDefault();
+        }
     });
 });
